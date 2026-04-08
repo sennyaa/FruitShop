@@ -1,5 +1,6 @@
 package strategy.impl;
 
+import db.Storage;
 import model.FruitTransaction;
 import strategy.OperationHandler;
 import static db.Storage.storage;
@@ -7,6 +8,6 @@ import static db.Storage.storage;
 public class BalanceOperation implements OperationHandler {
     @Override
     public void apply(FruitTransaction transaction) {
-        storage.merge(transaction.getFruit(), transaction.getQuantity(),Integer::sum);
+        Storage.setQuantity(transaction.getFruit(), transaction.getQuantity());
     }
 }

@@ -3,7 +3,7 @@ package service.impl;
 import java.util.List;
 import java.util.stream.*;
 import model.FruitTransaction;
-import model.FruitTransaction.Operation;
+import model.Operation;
 import service.DataConverter;
 
 public class DataConverterImpl implements DataConverter {
